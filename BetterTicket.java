@@ -9,7 +9,8 @@
  * @author David J. Barnes and Michael Kolling
  * @version 2008.03.30
  */
-public class TicketMachine
+import java.util.Scanner;
+public class BetterTicket
 {
     // The price of a ticket from this machine.
     private Integer price;
@@ -29,7 +30,7 @@ public class TicketMachine
      * Note that the price must be greater than zero, and there
      * are no checks to ensure this.
      */
-    public TicketMachine()
+    public BetterTicket()
     {
         price = 1000;
         balance = 0;
@@ -38,7 +39,7 @@ public class TicketMachine
         budget = 100;
     }
     
-    public TicketMachine(int cost)
+    public BetterTicket(int cost)
     {
         price = cost;
         balance = 0;
@@ -145,6 +146,8 @@ public class TicketMachine
      */
     public String printTicket()
     {
+        Scanner in = new Scanner(System.in);
+        price = in.nextInt();
         int amountLeftToPay = price - balance;
         if(amountLeftToPay > 0){
             return "Error: not enough funds, balance is:" + balance + "and price is:" + price;
