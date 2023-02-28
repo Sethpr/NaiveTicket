@@ -43,13 +43,8 @@ Work through all these exercises. You edit this file with your answers for these
 
 ### Exercise 2.6
 * Write out what you think the outer wrappers of the `Student` and `LabClass` classes might look like – do not worry about the inner part.
-
-* 
-* 
-* 
-* NOT DONE HERE
-* 
-* 
+public class Student(){...}
+public class LabClass() extends Student{...}
 
 ### Exercise 2.7
 Does it matter whether we write<br>
